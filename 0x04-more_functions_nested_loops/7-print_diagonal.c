@@ -5,7 +5,7 @@
  * @n: input
  * Return: Diagonal
  */
-void print_diagonal(int n);
+void print_diagonal(int n)
 {
 int co, sp;
 
