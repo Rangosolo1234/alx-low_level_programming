@@ -15,7 +15,7 @@ _putchar('\n');
 }
 else
 {
-for (co = n; co <= n; co++)
+for (co = 1; co <= n; co++)
 {
 for (sp = 1; sp < co; sp++)
 {
