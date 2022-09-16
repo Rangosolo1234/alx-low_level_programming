@@ -13,7 +13,7 @@ int main(void)
 int i;
 char f[] = "Fizz";
 char b[] = "Buzz";
-char fb[] = "fizzBuzz";
+char fb[] = "FizzBuzz";
 
 for (i = i; i <= 100; i++)
 {
