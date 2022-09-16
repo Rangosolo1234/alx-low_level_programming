@@ -15,7 +15,7 @@ char f[] = "Fizz";
 char b[] = "Buzz";
 char fb[] = "FizzBuzz";
 
-for (i = i; i <= 100; i++)
+for (i = 1; i <= 100; i++)
 {
 if (i == 100)
 printf("%s", b);
