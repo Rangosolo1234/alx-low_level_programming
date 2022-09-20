@@ -3,7 +3,7 @@
  * rev_string - character in reverse
  * @s: input to be changed
  */
-void rev_string(char *)
+void rev_string(char *s)
 {
 int ini = 0, finish = 0;
 char t;
