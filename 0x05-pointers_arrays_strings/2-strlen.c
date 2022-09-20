@@ -13,3 +13,4 @@ len = len + 1;
 s = s + 1;
 return (len);
 }
+}
