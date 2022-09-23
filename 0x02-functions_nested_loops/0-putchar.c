@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 #include <main.h>
 /**
  * main - start point
@@ -9,7 +6,8 @@
  */
 int main(void)
 {
-printf("_putchar\n");
+_putchar("_putchar");
+_putchar('\n');
 
 return (0);
 }
