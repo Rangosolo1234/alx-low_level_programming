@@ -56,7 +56,8 @@ ptr[x] = str[x];
 x++;
 }
 return (ptr);
-}char *s;
+}
+char *s;
 s = _strdup("ALX SE");
 if (s == NULL)
 {
