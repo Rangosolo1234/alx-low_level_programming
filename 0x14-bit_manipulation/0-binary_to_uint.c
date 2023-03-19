@@ -1,5 +1,6 @@
 /*
- * Author: Solomon Kipkirui
+ * Auth: Solomon Kipkirui
+ * File: 0-binary_to_uint.c
  */
 #include "main.h"
 
