@@ -23,4 +23,5 @@ num += (b[len] - '0') * mult;
 mult *= 2;
 }
 return (num);
+_putchar('\n');
 }
