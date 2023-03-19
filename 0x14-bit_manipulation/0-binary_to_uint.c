@@ -1,3 +1,6 @@
+/*
+ * Author: Solomon Kipkirui
+ */
 #include "main.h"
 
 /**
