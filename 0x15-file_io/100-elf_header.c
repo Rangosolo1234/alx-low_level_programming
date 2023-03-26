@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * check_elf - Checks if file is an ELF file
- * @e_ident: Pointer to an array containing ELF magic numbers`
+ * @e_ident: Pointer to an array containing ELF magic numbers
  */
 void check_elf(unsigned char *e_ident)
 {
@@ -127,9 +127,9 @@ void print_data(unsigned char *e_ident)
 	       e_ident[EI_ABIVERSION]);
 }
 /**
- * print_type - Prints type of file
- * @e_type: ELF
- * @e_ident: Pointer
+ * print_type - Prints type of an ELF header
+ * @e_type: The ELF type
+ * @e_ident: Pointer to an array containing the ELF class
  */
 void print_type(unsigned int e_type, unsigned char *e_ident)
 {
@@ -159,8 +159,8 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 	}
 }
 /**
- * print_entry - Prints start point of file
- * @e_entry: Address
+ * print_entry - Prints the entry point of an ELF header
+ * @e_entry: Address of the ELF entry point
  * @e_ident: Pointer to an array containing the ELF class
  */
 void print_entry(unsigned long int e_entry, unsigned char *e_ident)
@@ -181,7 +181,7 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 		printf("%#lx\n", e_entry);
 }
 /**
- * close_elf - Closes ELF file
+ * close_elf - Closes an ELF file
  * @elf: File descriptor of the ELF file
  */
 void close_elf(int elf)
@@ -194,10 +194,11 @@ void close_elf(int elf)
 	}
 }
 /**
- * main - ELF disply
- * @argc: argument count
- * @argv: argument vector
- * Return: 0 success
+ * main - Displays information contained in the
+ * ELF header at the start of an ELF file
+ * @argc: Number of arguments
+ * @argv: Array of pointers to the arguments
+ * Return: 0 for success
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
