@@ -1,8 +1,10 @@
 #include "main.h"
+
 /**
  * check_elf - Checks if file is an ELF file
  * @e_ident: Pointer to an array containing ELF magic numbers
  */
+
 void check_elf(unsigned char *e_ident)
 {
 	int index;
@@ -19,10 +21,12 @@ void check_elf(unsigned char *e_ident)
 		}
 	}
 }
+
 /**
  * print_data - Prints magic numbers of an ELF header
  * @e_ident: Pointer to an array containing ELF magic numbers
  */
+
 void print_data(unsigned char *e_ident)
 {
 	int index;
@@ -126,11 +130,13 @@ void print_data(unsigned char *e_ident)
 	printf("  ABI Version:                       %d\n",
 	       e_ident[EI_ABIVERSION]);
 }
+
 /**
  * print_type - Prints type of ELF header
  * @e_type: The ELF type
  * @e_ident: Pointer to an array
  */
+
 void print_type(unsigned int e_type, unsigned char *e_ident)
 {
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
@@ -158,11 +164,13 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 		printf("<unknown: %x>\n", e_type);
 	}
 }
+
 /**
  * print_entry - Prints the entry point of an ELF header
  * @e_entry: Address of the ELF entry point
  * @e_ident: Pointer to an array containing the ELF class
  */
+
 void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
 	printf("  Entry point address:               ");
@@ -180,10 +188,12 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 	else
 		printf("%#lx\n", e_entry);
 }
+
 /**
  * close_elf - Closes an ELF file
  * @elf: File descriptor of the ELF file
  */
+
 void close_elf(int elf)
 {
 	if (close(elf) == -1)
@@ -193,6 +203,7 @@ void close_elf(int elf)
 		exit(98);
 	}
 }
+
 /**
  * main - Displays information contained in the
  * ELF header at the start of an ELF file
@@ -200,6 +211,7 @@ void close_elf(int elf)
  * @argv: Array of pointers to the arguments
  * Return: 0 for success
  */
+
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *header;
