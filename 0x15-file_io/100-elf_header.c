@@ -127,9 +127,9 @@ void print_data(unsigned char *e_ident)
 	       e_ident[EI_ABIVERSION]);
 }
 /**
- * print_type - Prints type of an ELF header
- * @e_type: ELF type
- * @e_ident: Pointer to an array containing the ELF class
+ * print_type - Prints type of ELF header
+ * @e_type: The ELF type
+ * @e_ident: Pointer to an array
  */
 void print_type(unsigned int e_type, unsigned char *e_ident)
 {
@@ -181,7 +181,7 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 		printf("%#lx\n", e_entry);
 }
 /**
- * close_elf - Close ELF file
+ * close_elf - Closes an ELF file
  * @elf: File descriptor of the ELF file
  */
 void close_elf(int elf)
@@ -196,8 +196,8 @@ void close_elf(int elf)
 /**
  * main - Displays information contained in the
  * ELF header at the start of an ELF file
- * @argc: Argument count
- * @argv: Argument vector
+ * @argc: Number of arguments
+ * @argv: Array of pointers to the arguments
  * Return: 0 for success
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
