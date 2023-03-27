@@ -16,7 +16,7 @@ void error_type(int file1, int file2, char *av[]);
 int main(int argc, char *argv[]);
 
 /**
- * Header
+ * ELF Header
   */
 void check_elf(unsigned char *e_ident);
 void print_magic(unsigned char *e_ident);
