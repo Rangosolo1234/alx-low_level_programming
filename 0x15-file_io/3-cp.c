@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * error_type - Function to state error type
- * @file1: File to copy from
- * @file2: File to copy to
+ * @file1: File from
+ * @file2: File to
  * @av: Argument vector
  */
 void error_type(int file1, int file2, char *av[])
@@ -19,10 +19,10 @@ void error_type(int file1, int file2, char *av[])
 	}
 }
 /**
- * main - Program o copy file to another file
- * @argc: argument count
- * @argv: argument vector
- * Return: 0 success
+ * main - Copy contents of one file to another
+ * @argc: Argument count
+ * @argv: Argument vector
+ * Return: 0 (success)
  */
 int main(int argc, char *argv[])
 {
