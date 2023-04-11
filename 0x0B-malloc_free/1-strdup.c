@@ -1,70 +1,32 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * main - check the code for ALX School students.
+ * _strdup - Function that returns a pointer
+ * a newly allocated space in memory which contains
+ * a copy of the string
  *
- * Return: Always 0.
- */
-int main(void)
-{
-#include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
-
-/**
- * _strlen - return length of a string
- *
- * @s: char type
- * Return:  length of string
- */
-int _strlen(char *s)
-{
-int a;
-for (a = 0; s[a] != '\0'; a++)
-{
-}
-return (a);
-}
-
-/**
- * *_strdup - function to return pointer to string
- * @str: pointer to string array input
- * Return: pointer to string created
+ * @str: Points to string
+ * Return: Pointer to the duplicated string, otherwise NULL
  */
 
 char *_strdup(char *str)
 {
-char *ptr;
-int size;
-int x;
-if (str == NULL)
-{
-return (NULL);
-}
-size = _strlen(str) + 1;
-ptr = malloc(size * sizeof(char));
-x = 0;
-while (x < size)
-{
-if (ptr == NULL)
-{
-return (NULL);
-}
-ptr[x] = str[x];
-x++;
-}
-return (ptr);
-}
-char *s;
-s = _strdup("ALX SE");
-if (s == NULL)
-{
-printf("failed to allocate memory\n");
-return (1);
-}
-printf("%s\n", s);
-free(s);
-return (0);
+	char *str_copy;
+	unsigned int i, str_len = 0;
+
+	if (str == NULL)
+		return (NULL);
+
+	while (str[str_len])
+		str_len++;
+	str_len++;
+
+	str_copy = malloc(sizeof(char) * str_len);
+	if (str_copy == NULL)
+		return (NULL);
+	for (i = 0; i < str_len; i++)
+		str_copy[i] = str[i];
+	str_copy[i] = '\0';
+	return (str_copy);
 }

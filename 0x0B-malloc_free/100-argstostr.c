@@ -1,47 +1,41 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * *argstostr - convert arguments on command line to strings
- * @ac: int type
- * @av: pointer to array
- * Return: arguments as strings
+ * argstostr - Function adds
+ *
+ * @ac: Argument count
+ * @av: Argument vector
+ * Return: Pointer to new string, otherwise NULL
  */
 
 char *argstostr(int ac, char **av)
 {
-int size, count, count1, count2 = 0;
-char *ptr;
-if (ac == 0 || av == NULL)
-{
-return (NULL);
-}
-for (count = 0; count < ac; count++)
-{
-for (count1 = 0; av[count][count1] != '\0'; count1++)
-{
-size += 1;
-}
-size += 1;
-}
-size += 1;
-ptr = malloc(sizeof(char) * size);
-if (ptr == NULL)
-{
-free(ptr);
-return (NULL);
-}
-for (count = 0; count < ac; count++)
-{
-for (count1 = 0; av[count][count1] != '\0'; count1++)
-{
-ptr[count2] = av[count][count1];
-count2++;
-}
-ptr[count2] = '\n';
-count2++;
-}
-ptr[count2] = '\0';
-return (ptr);
+	char *str_copy;
+	int idx, idx2, count = 0, size = 0;
+
+	if (ac == 0 || av == NULL)
+		return (NULL);
+	for (idx = 0; idx < ac; idx++)
+	{
+		for (idx2 = 0; av[idx][idx2]; idx2++)
+			size++;
+		size++;
+	}
+	size++;
+
+	str_copy = malloc(sizeof(char) * size);
+	if (str_copy == NULL)
+		return (NULL);
+	for (idx = 0; idx < ac; idx++)
+	{
+		for (idx2 = 0; av[idx][idx2]; idx2++)
+		{
+			str_copy[count] = av[idx][idx2];
+			count++;
+		}
+		str_copy[count] = '\n';
+		count++;
+	}
+	return (str_copy);
 }
